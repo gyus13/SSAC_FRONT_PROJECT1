@@ -265,3 +265,36 @@ body {
   font-size: 50px;
   margin-bottom: 20px;
 }
+<<<<<<< HEAD
+=======
+
+/* 메인 css -gyus*/
+.main {
+  width : 720px;
+  position : absolute;
+  left : 0px;
+  right : 0px;
+  margin-top : 10px;
+  margin-left : auto;
+  margin-right : auto;
+  padding : 40px;
+}
+
+/* feed hover시 효과 */
+.Feed-container:hover {  
+  transition: transform 1s;
+  filter: brightness(70%);}
+
+.Feed-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#explain{ 
+  position: absolute;
+  text-align : center;
+   opacity: 0;
+  z-index: 6; } 
+
+.Feed-container:hover #explain{ opacity: 1; }
+>>>>>>> 58d843c (feed 수정)
