@@ -8,7 +8,6 @@ body {
   height: 80px;
 }
 .header {
-  border: solid 5px red;
   color: red;
 }
 /*
@@ -22,7 +21,7 @@ display: sticky 고려
   height: 50px;
 
   text-align: center;
-  border: solid 2px orange;
+
 }
 
 /*
@@ -41,7 +40,7 @@ h6 {
   height: 300px;
 
   text-align: center;
-  border: solid 2px yellow;
+
 }
 
 .profileimg {
@@ -50,7 +49,7 @@ h6 {
   float: left;
 
   text-align: center;
-  border: solid 4px blue;
+
 }
 
 .description {
@@ -59,7 +58,6 @@ h6 {
   float: right;
 
   text-align: center;
-  border: solid 4px purple;
 }
 
 .what {
@@ -69,7 +67,6 @@ h6 {
   height: 100px;
 
   text-align: center;
-  border: solid 2px green;
 }
 
 hr {
@@ -77,7 +74,8 @@ hr {
 }
 
 .content {
-  color: blue;
+  font-size : 20px;
+  color: #ffffff;
 }
 .category {
   margin: 0;
@@ -86,11 +84,7 @@ hr {
   height: 100px;
 
   text-align: center;
-  border: solid 3px blue;
-}
 
-.feed {
-  border: solid 3px orange;
 }
 
 .item {
@@ -104,7 +98,6 @@ hr {
   height: 70px;
 
   text-align: center;
-  border: solid 2px pink;
 }
 
 @import url("//fonts.cdnfonts.com/css/billabong");
@@ -195,6 +188,7 @@ body {
   text-align: center;
 }
 
+
 .navigation-icons a {
   text-decoration: none;
 }
@@ -244,14 +238,15 @@ body {
 .item {
   height: 220px;
   width: 220px;
-  border: 1px solid darkgrey;
   background-color: grey;
   margin-top: 20px;
 }
 
 .Feed-container {
+  overflow: hidden;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
@@ -265,3 +260,32 @@ body {
   font-size: 50px;
   margin-bottom: 20px;
 }
+
+/* 메인 css -gyus*/
+.main {
+  width : 720px;
+  position : absolute;
+  left : 0px;
+  right : 0px;
+  margin-top : 10px;
+  margin-left : auto;
+  margin-right : auto;
+  padding : 40px;
+}
+
+/* feed hover시 효과 */
+.Feed-container:hover {  
+  transition: transform 1s;
+  filter: brightness(70%);}
+
+.Feed-container img {
+  width: 100%;
+  height: 100%;
+}
+
+#explain{ 
+  position: absolute;
+  text-align : center;
+   opacity: 0; } 
+
+.Feed-container:hover #explain{ opacity: 1; }
