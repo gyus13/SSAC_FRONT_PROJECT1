@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    </script>
+</head>
+    <div class="App">
+        <div class="navigation">
+            <div class="logo">
+              <a class="no-underline" href="#">
+               군침이 ㅇㄹㄹㄹㄹㄹㄹ
+              </a>
+            </div>
+            <div class="navigation-search-container">
+              <i class="fa fa-search"></i>
+              <input class="search-field" type="text" placeholder="Search">
+              <div class="search-container">
+                <div class="search-container-box">
+                  <div class="search-results">
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="navigation-icons">
+              <a href="https://instagram.com/mimoudix" target ="_blank" class="navigation-link">
+                <i class="far fa-compass"></i>
+              </a>
+              <a class="navigation-link notifica">
+                <i class="far fa-heart">
+                  <div class="notification-bubble-wrapper">
+                    <div class="notification-bubble">
+                      <span class="notifications-count">99</span>
+                    </div>
+                  </div>
+                </i>
+              </a>
+              <a href="https://instagram.com/mimoudix" class="navigation-link">
+                <i class="far fa-user-circle"></i>
+              </a>
+              <a href="https://instagram.com/mimoudix" id="signout" class="navigation-link">
+                <i class="fas fa-sign-out-alt"></i>
+              </a>
+            </div>
+          </div>
+
+        <div class="yame"></div>
+        <div class="header">
+            <div class="header_bar">
+                <h6>class: header_bar</h6>
+            </div>
+                
+            <div class="header_content">
+                <div class="profileimg"><h6>class: header_content  <br/>class: logo</h6></div>
+                <div class="description"><h6>class: header_content  <br/>class: description</h6></div>
+            </div>
+
+            <div class="what">
+                <h1><h6>class: what</h6></h1>
+            </div>
+        </div>
+
+
+        <!--
+            박한솔
+            content 태그 내에서 map 삽입, 위에 코드를 안 쓸 수 있도록 수정 목표
+        -->
+        <div class="content">
+            <div class="category">
+                <hr hr style="border: solid 10px" />
+                <h6>class: category</h6>
+            </div>
+            
+            <!--
+                박한솔
+                네이버 지도api 소스, 스타일 적용x   
+            -->
+            <div class="map">
+                <h6>class: map</h6>
+                
+                <!--
+                    박한솔
+                    지도, 나한테만 보임 당황 x 
+                -->
+                <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5n5wk9vsd4"></script>
+                <div id="map" style="width:100%;height:400px;"></div>
+                <script>
+                    var mapOptions = {
+                    center: new naver.maps.LatLng(37.3595704, 127.105399),
+                    zoom: 10
+                };
+                var map = new naver.maps.Map('map', mapOptions);
+                </script>
+            </div>
+
+            <div class="footer">
+                <h6>class: footer</h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
