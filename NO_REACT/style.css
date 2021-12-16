@@ -286,6 +286,7 @@ body {
 #explain{ 
   position: absolute;
   text-align : center;
-   opacity: 0; } 
+   opacity: 0;
+  z-index: 6; } 
 
 .Feed-container:hover #explain{ opacity: 1; }
