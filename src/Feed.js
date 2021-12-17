@@ -17,8 +17,6 @@ const Feed = () => {
                 stores.map((a, i)=> {
                     return <Item stores={stores[i]}></Item>
                 })}
-
-
         </div>
     )
 }
