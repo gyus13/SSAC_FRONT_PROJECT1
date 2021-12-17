@@ -99,11 +99,12 @@ hr {
   display: block;
   position: relative;
   height: 70px;
-
   text-align: center;
-  border: solid 2px pink;
 }
 
+.footer ul {
+  list-style: none;
+}
 @import url("//fonts.cdnfonts.com/css/billabong");
 body {
   background: #fafafa;
