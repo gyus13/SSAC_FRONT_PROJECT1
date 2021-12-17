@@ -73,9 +73,6 @@ hr {
   margin: 0;
 }
 
-.content {
-  color: blue;
-}
 .category {
   margin: 0;
   display: block;
@@ -253,13 +250,64 @@ body {
   justify-content: space-around;
 }
 
-.Category {
+.category {
   display: flex;
   justify-content: space-evenly;
 }
 
-.header {
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 20px;
+.category > hr {
+  margin-top: 5px;
+  margin-bottom: 3px;
+  height: 2px;
+  background-color: pink;
+  width: 70%;
+}
+
+.category__info {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+}
+
+.category__map {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+}
+
+/*일단 a 태그로*/
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}
+
+a:active {
+  color: red;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+}
+
+#map {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid red 5px;
 }
