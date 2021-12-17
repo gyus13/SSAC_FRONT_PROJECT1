@@ -2,101 +2,264 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>군침이 SSAC( 변경 가능 )</title>
     <link rel="stylesheet" href="./css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/70bcd220d4.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="style.css">
-    <script>
-    </script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/map_marker.png">
 </head>
-    <div class="App">
-        <div class="navigation">
-            <div class="logo">
-              <a class="no-underline" href="#">
-               군침이 SSAC
-              </a>
-            </div>
-            <div class="navigation-search-container">
-              <i class="fa fa-search"></i>
-              <input class="search-field" type="text" placeholder="Search">
-              <div class="search-container">
+
+<body>
+  
+    <!--1. 네비게이션 바-->
+    <div class="navigation">
+      
+        <div class="logo">
+            <a class="no-underline" href="#">
+                군침이 SSAC
+            </a>
+        </div>
+      
+        <div class="navigation-search-container">
+            <i class="fa fa-search"></i>
+            <input class="search-field" type="text" placeholder="Search">
+            <div class="search-container">
                 <div class="search-container-box">
-                  <div class="search-results">
-          
-                  </div>
+                    <div class="search-results"></div>
                 </div>
-              </div>
-            </div>
-            <div class="navigation-icons">
-              <a href="#" target ="_blank" class="navigation-link">
-                <i class="fas fa-home"></i>
-              </a>
-              <a class="navigation-link notifica">
-                <i class="far fa-sticky-note"></i>
-                  <div class="notification-bubble-wrapper">
-                    <div class="notification-bubble">
-                      <span class="notifications-count">99</span>
-                    </div>
-                  </div>
-                </i>
-              </a>
-              <a href="#" class="navigation-link">
-                <i class="far fa-envelope"></i>
-              </a>
-              <a href="#" id="signout" class="navigation-link">
-              </a>
-            </div>
-          </div>
-
-        <div class="yame"></div>
-        <div class="header">
-            <div class="header_bar">
-                <h6>class: header_bar</h6>
-            </div>
-                
-            <div class="header_content">
-                <div class="profileimg"><h6>class: header_content  <br/>class: logo</h6></div>
-                <div class="description"><h6>class: header_content  <br/>class: description</h6></div>
-            </div>
-
-            <div class="what">
-                <h1><h6>class: what</h6></h1>
             </div>
         </div>
+      
+        <div class="navigation-icons">
+            <a href="#" target ="_blank" class="navigation-link">
+                <i class="fas fa-home"></i>
+            </a>
+            <a class="navigation-link notifica">
+                <i class="far fa-sticky-note"></i>
+                <div class="notification-bubble-wrapper">
+                    <div class="notification-bubble">
+                    <span class="notifications-count">99</span>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="navigation-link">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a href="#" id="signout" class="navigation-link">
+            </a>
+        </div>
+    
+    </div>
+    <!--네비게이션 박스만큼의 div-->
+    <div class="navagation_div"></div>
 
-        <div class="content">
-            <div class="category">
-                <hr hr style="border: solid 10px" />
-                <h6>class: category</h6>
+    <!--2. 헤더 -->
+    <div class="header">
+      
+        <div class="header__profile">
+            <div class="header__profile-profileimg"> <img src="./img/profile.jpg" width="200" height="200"></div>
+            
+            <div class="header__profile-description">
+                <h1>foodfighter</h1>
+                <span><b>게시물: 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팔로워: 2.7M</b></span>
+                <p>
+                    군침이 싸악 도는 한국의 모든 맛집 탐구!
+                    <br/>
+                    양식, 중식, 한식, 분식, 일식 등 가리지 않아요
+                    <br/>
+                    🍲 🍛
+                </p> 
+            </div>
+        </div>
+        
+        <!--
+        <div class="header__link">
+            <div class="header__link-container">
+            </div>
+        </div>
+        -->
+    </div>
+
+    <!--3. 카테고리-->    
+    <div class="category">
+        <hr/>
+        <div class=category__info style="border-top: solid rgb(63, 63, 63) 2px";>
+            <a href="index.html">
+                <img src="img/feed_icon.png">
+                <span style="font-weight: 700";>정보</span>
+            </a>
+        </div>
+  
+        <div class=category__map>
+            <a href="map.html">
+                <img src="img/map_icon.png">
+                <span>지도</span>
+            </a>
+        </div>
+    </div>
+    
+    <!--4.컨텐츠-->
+    <div class="main">
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
             </div>
             
-            <div class="feed">
-                <div class="Feed-container">
-                    <div class="item"></div> 
-                    <div class="item"></div> 
-                    <div class="item"></div> 
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
                 </div>
-                <div class="Feed-container">
-                    <div class="item"></div> 
-                    <div class="item"></div> 
-                    <div class="item"></div> 
-                </div>
-                <div class="Feed-container">
-                    <div class="item"></div> 
-                    <div class="item"></div> 
-                    <div class="item"></div> 
-                </div>
-            </div>
-
-            <div class="footer">
-                <h6>class: footer</h6>
             </div>
         </div>
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
+            </div>
+            
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
+                </div>
+            </div>
+        </div>
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
+            </div>
+            
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
+            </div>
+            
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
+            </div>
+            
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
+                </div>
+            </div>
+        </div>
+            
+        
+        <div class="feed">
+            <div class ='feed__explain'>
+                <p class="feed__explain-name">수작카츠</p> 
+                <p class="feed__explain-content">
+                    수작카츠는 당일 도축된 도드람한돈
+                    1등급 암퇘지만을 엄선하여 조리하는
+                    정통 수제돈카츠 전문매장
+                </p> 
+                <p class="feed__explain-rating">평점-4.61</p>
+            </div>
+            
+            <div class= "feed__item-container">
+                <div class="item">
+                    <img src="img/삼겹살1.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살2.jpg" alt="">
+                </div> 
+                <div class="item">
+                    <img src="img/삼겹살3.jpg" alt=""> 
+                </div>
+            </div>
+        </div>
+            
+    </div>
+  
+    <!--4.풋터-->
+    <div class="footer">
+        <img src="img/footer.jpg" width="700px" height="80px">
     </div>
 </body>
 </html>
