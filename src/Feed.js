@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Item from "./Item";
 import stores from "./stores";
 
+import { Link, Route, Switch } from 'react-router-dom';
+
 const Feed = () => {
     return (
         <div className="feed">
@@ -10,13 +12,21 @@ const Feed = () => {
             <div className="header"><b>구로구 맛집탐방</b></div>
             <hr />
             <div className="category">
-                <div>게시물</div>
-                <div>지도</div>
+
+            <Link to="/feed"><div>게시물</div></Link>
+            <Link to="/map"><div>지도</div></Link>
+            
             </div>
-            {
-                stores.map((a, i)=> {
-                    return <Item stores={stores[i]}></Item>
-                })}
+            <Route path="/feed">
+                {
+                    stores.map((a, i) => {
+                        return <Item stores={stores[i]}></Item>
+                    })}
+            </Route>
+
+            <Route path="/map">
+                <p>지도 페이지 입니다.</p>
+            </Route>
         </div>
     )
 }
