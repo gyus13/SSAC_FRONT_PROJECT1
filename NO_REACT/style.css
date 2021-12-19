@@ -16,63 +16,60 @@ body {
 */
 
 .header {
+  box-sizing: content-box;
   margin-bottom: 20px;
 }
 
 .header__profile {
+  /*730px*/
   display: flex;
   justify-content: center;
-  overflow: auto;
   height: 300px;
-
-  border: green 2px solid;
 }
 
 .header__profileimgwrapper {
   position: relative;
   overflow: auto;
   width: 300px;
-  height: 300px;
 }
 
 .header__profileimgwrapper-profileimg {
   position: absolute;
   overflow: hidden;
-  top: 10px;
-  left: 20rem;
-  border-radius: 50%;
   border: 4px solid #ff7ecc;
+  top: 10px;
+  right: 30px;
+  border-radius: 50%;
 }
 
 .header__profile-description {
   position: relative;
-  overflow: auto;
-  width: 300px;
-  height: 300px;
+  width: 430px;
 
+  /*에러 방지용*/
   overflow: auto;
 }
 
 .header__profile-description h1 {
-  font-size: 3rem;
   position: absolute;
-  left: 10%;
-  top: 10%;
   font-weight: lighter;
+  font-size: 3rem;
+  top: 10%;
+  left: 10%;
 }
 
 .header__profile-description span {
-  font-size: 1.2rem;
   position: absolute;
+  font-size: 1.2rem;
   top: 40%;
   left: 10%;
 }
 
 .header__profile-description p {
   position: absolute;
+  text-align: left;
   left: 10%;
   bottom: 15%;
-  text-align: left;
 }
 /**
 .header__link {
@@ -101,41 +98,36 @@ body {
 */
 
 .category {
-  margin: 0;
-  display: block;
-  position: relative;
-  height: 30px;
-  align-items: center;
-  text-align: center;
+  box-sizing: content-box;
 }
 
-.category > hr {
-  margin-top: 5px;
-  margin-bottom: 0px;
+.category hr {
+  /*
+  margin 과 text align을 같이 쓰면, 가운데 정렬이 되지 않는다.
+  뒤에 auto 값을 줘야함
+  */
+  text-align: center;
+  margin: 0px auto;
   height: 1px;
   background-color: gainsboro;
   width: 730px;
 }
 
+.category__wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: -2px;
+  height: 30px;
+}
+
 .category__info {
-  position: relative;
-  display: inline-block;
-  top: -2px;
-  margin-top: 0px;
-  padding: 0px;
   width: 70px;
-  height: 70px;
   margin-right: 20px;
 }
 
 .category__map {
-  position: relative;
-  display: inline-block;
-  top: -2px;
-  margin-top: 0px;
-  padding: 0px;
   width: 70px;
-  height: 70px;
   margin-left: 20px;
 }
 
