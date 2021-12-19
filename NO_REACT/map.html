@@ -118,39 +118,137 @@
             <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5n5wk9vsd4"></script>
             <div id="map" style="width:100%;height:600px;"></div>
             <script>
-                var position = new naver.maps.LatLng(37.47238731740359, 126.89602897456294);
+                var myPosition = new naver.maps.LatLng(37.47238731740359, 126.89602897456294)
                 var map = new naver.maps.Map('map', {
-                    center: position,
+                    center: myPosition,
                     zoom: 16
                 });
 
-                //마커 모음
-                var markerArr = new Array();
+                //마커 위치 모음
+                var markerLatLngs = new Array();
                 //수작카츠 독산점
-                markerArr.push(new naver.maps.LatLng(37.468653572531856, 126.89535025189723));
+                markerLatLngs.push(new naver.maps.LatLng(37.468653572531856, 126.89535025189723));
                 //이화룡 불짬뽕
-                markerArr.push(new naver.maps.LatLng(37.46955246261429, 126.89905664026355));
+                markerLatLngs.push(new naver.maps.LatLng(37.46955246261429, 126.89905664026355));
                 //프랭크 서울
-                markerArr.push(new naver.maps.LatLng(37.4736118303616, 126.89517717590284));
+                markerLatLngs.push(new naver.maps.LatLng(37.4736118303616, 126.89517717590284));
                 //북산동 순두부
-                markerArr.push(new naver.maps.LatLng(37.47045467981596, 126.89728648444668));
+                markerLatLngs.push(new naver.maps.LatLng(37.47045467981596, 126.89728648444668));
                 //진명면옥
+                markerLatLngs.push(new naver.maps.LatLng(37.47167694499592, 126.90042325184629));
                 //순댕이네 얼큰수제비
+                markerLatLngs.push(new naver.maps.LatLng(37.4724060587129, 126.89929374026363));
+                //info 창 배열
+                info = ["수작카츠","이화룡 불짬뽕","프랭크 서울","북산동 순두부","진영면옥","순댕이네 얼큰수제비"];
+                var infoWindowArr = new Array();
 
+                //마커 옵션 배열
                 var markerOptionArr = new Array();
-                for(var i=0;i<markerArr.length;++i){
+                //실제 마커 배열
+                var markers = new Array();
+                
+                for(var i=0;i<markerLatLngs.length;++i){
+                    infoWindowArr[i]= new naver.maps.InfoWindow({
+                    content: '<div style="width:200px;text-align:center;padding:10px;"><b>'+info[i]+'</b></div>'
+                    });
+                }
+
+                var myMarker = new naver.maps.Marker({
+                    position: myPosition.destinationPoint(0,20),
+                    map:map,
+                    icon: {
+                        url: './img/my_marker.png',
+                        size: new naver.maps.Size(50, 50),
+                        origin: new naver.maps.Point(0, 0),
+                        anchor: new naver.maps.Point(25, 25)
+                    }
+                });
+
+                naver.maps.Event.addListener(myMarker, 'click', function(e){map.panTo(e.coord);});
+
+                
+                for(var i=0;i<markerLatLngs.length;++i){
                     markerOptionArr[i]={
-                        position: markerArr[i].destinationPoint(0,20),
+                        position: markerLatLngs[i].destinationPoint(0,20),
                         map:map,
                         icon: {
                             url: './img/map_marker.png',
-                            size: new naver.maps.Size(50, 52),
+                            size: new naver.maps.Size(50, 50),
                             origin: new naver.maps.Point(0, 0),
-                            anchor: new naver.maps.Point(25, 26)
+                            anchor: new naver.maps.Point(25, 25)
                         }
                     };
-                    var marker= new naver.maps.Marker(markerOptionArr[i]);
+                    var marker = new naver.maps.Marker(markerOptionArr[i]);
+                    markers.push(marker);
                 }
+
+                //반복문이 왜 안되는지
+
+                naver.maps.Event.addListener(markers[0], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[0].getMap()) {
+                            infoWindowArr[0].close();
+                        } else {
+                            infoWindowArr[0].open(map, markers[0]);
+                        }
+                    }
+                );
+
+
+                naver.maps.Event.addListener(markers[1], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[1].getMap()) {
+                            infoWindowArr[1].close();
+                        } else {
+                            infoWindowArr[1].open(map, markers[1]);
+                        }
+                    }
+                );
+
+
+                naver.maps.Event.addListener(markers[2], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[2].getMap()) {
+                            infoWindowArr[2].close();
+                        } else {
+                            infoWindowArr[2].open(map, markers[2]);
+                        }
+                    }
+                );
+
+
+                naver.maps.Event.addListener(markers[3], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[3].getMap()) {
+                            infoWindowArr[3].close();
+                        } else {
+                            infoWindowArr[3].open(map, markers[3]);
+                        }
+                    }
+                );
+
+
+                naver.maps.Event.addListener(markers[4], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[4].getMap()) {
+                            infoWindowArr[4].close();
+                        } else {
+                            infoWindowArr[4].open(map, markers[4]);
+                        }
+                    }
+                );
+
+
+                naver.maps.Event.addListener(markers[5], 'click', function(e){
+                        map.panTo(e.coord);
+                        if (infoWindowArr[5].getMap()) {
+                            infoWindowArr[5].close();
+                        } else {
+                            infoWindowArr[5].open(map, markers[5]);
+                        }
+                    }
+                );
+
             </script>
         </div>
     </div>
