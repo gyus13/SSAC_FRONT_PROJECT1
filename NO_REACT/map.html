@@ -20,42 +20,31 @@
   
     <!--1. 네비게이션 바-->
     <div class="navigation">
-      
-        <div class="logo">
-            <a class="no-underline" href="#">
-                군침이 SSAC
-            </a>
-        </div>
-      
-        <div class="navigation-search-container">
-            <i class="fa fa-search"></i>
-            <input class="search-field" type="text" placeholder="Search">
-            <div class="search-container">
-                <div class="search-container-box">
-                    <div class="search-results"></div>
+        <div class="navigation__wrapper">        
+            <div class="logo">
+                <a class="no-underline" href="#">
+                    군침이 SSAC
+                </a>
+            </div>
+            <div class="navigation-search-container">
+                <i class="fa fa-search"></i>
+                <input class="search-field" type="text" placeholder="Search">
+                <div class="search-container">
+                    <div class="search-container-box">
+                        <div class="search-results"></div>
+                    </div>
                 </div>
+            </div>
+        
+            <div class="navigation-icons">
+                <a href="#" target ="_blank" class="navigation-link">
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-pen"></i>
+                    <i class="far fa-envelope"></i>
+                </a>
             </div>
         </div>
       
-        <div class="navigation-icons">
-            <a href="#" target ="_blank" class="navigation-link">
-                <i class="fas fa-home"></i>
-            </a>
-            <a class="navigation-link notifica">
-                <i class="far fa-sticky-note"></i>
-                <div class="notification-bubble-wrapper">
-                    <div class="notification-bubble">
-                    <span class="notifications-count">99</span>
-                    </div>
-                </div>
-            </a>
-            <a href="#" class="navigation-link">
-                <i class="far fa-envelope"></i>
-            </a>
-            <a href="#" id="signout" class="navigation-link">
-            </a>
-        </div>
-    
     </div>
     <!--네비게이션 박스만큼의 div-->
     <div class="navagation_div"></div>
@@ -99,11 +88,11 @@
             <div class=category__info>
                 <a href="index.html">
                     <img src="img/feed_icon.png">
-                    <span style="color: #c94c9b;">정보</span>
+                    <span>정보</span>
                 </a>
             </div>
     
-            <div class=category__map style="border-top: solid #c94c9b 2px";>
+            <div class=category__map style="border-top: solid #c94c9b 3px";>
                 <a href="map.html">
                     <img src="img/map_icon.png">
                     <span style="font-weight: 700; color:#c94c9b;" >지도</span>

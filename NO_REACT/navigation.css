@@ -64,18 +64,18 @@
   color: rgba(0, 0, 0, 0.5);
 }
 
-.navigation-icons {
-  position: absolute;
-  top: 10px;
-  left: 800px;
-}
-
 .navigation-search-container input:focus {
   outline: none;
 }
 
 .navigation-search-container input::placeholder {
   text-align: center;
+}
+
+.navigation-icons {
+  position: absolute;
+  top: 10px;
+  left: 800px;
 }
 
 .navigation-icons a {
