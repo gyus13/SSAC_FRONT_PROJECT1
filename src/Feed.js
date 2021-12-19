@@ -2,14 +2,16 @@ import "./Feed.css";
 import Navbar from "./Navbar";
 import Item from "./Item";
 import stores from "./stores";
+import Login from "./Login";
 
 import { Link, Route, Switch } from 'react-router-dom';
 
 const Feed = () => {
     return (
-        <div className="feed">
+            <div>
             <Navbar></Navbar>
-            <div class="header"> 헤더부분 </div>
+            <div className="feed">
+            <div class="header"> </div>
                     <hr />
                     <div className="category">
 
@@ -17,6 +19,9 @@ const Feed = () => {
                         <Link to="/map"><div>지도</div></Link>
 
                     </div>
+                    <Route path="/login">
+                    <Login></Login>
+                    </Route>
                     <Route path="/feed">
                         {
                             stores.map((a, i) => {
@@ -27,6 +32,7 @@ const Feed = () => {
                     <Route path="/map">
                         <p>지도 페이지 입니다.</p>
                     </Route>
+                </div>
                 </div>
                 )
 }
