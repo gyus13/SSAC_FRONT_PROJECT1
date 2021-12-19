@@ -191,6 +191,27 @@ body {
   height: 220px;
 }
 
+.feed__item-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  height: 240px;
+  width: 240px;
+  background-color: grey;
+  justify-content: space-evenly;
+}
+
+.feed__item-container img {
+  width: 100%;
+  height: 100%;
+}
+
 .feed__explain {
   box-sizing: content-box;
   position: absolute;
@@ -212,25 +233,6 @@ body {
 .feed__explain-name {
   padding-bottom: 0;
   margin-bottom: 0;
-}
-
-.feed__item-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-}
-
-.feed__item-container img {
-  width: 100%;
-  height: 100%;
-}
-.item {
-  height: 240px;
-  width: 240px;
-  background-color: grey;
-  justify-content: space-evenly;
 }
 
 .feed:hover .feed__item-container {
