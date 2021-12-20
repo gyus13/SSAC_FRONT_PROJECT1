@@ -179,6 +179,8 @@ body {
 
   padding-left: 40px;
   padding-right: 40px;
+
+  border: red solid 2px;
 }
 
 .feed {
