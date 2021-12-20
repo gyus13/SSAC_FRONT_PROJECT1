@@ -1,4 +1,6 @@
 import "./Navigation.css";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Navigation = () =>{
     return (
@@ -11,7 +13,7 @@ const Navigation = () =>{
             </div>
           
             <div className="navigation-search-container">
-                <i className="fa fa-search"></i>
+                <FontAwesomeIcon icon={faSearch} className="search" />
                 <input className="search-field" type="text" placeholder="Search"></input>
                 <div className="search-container">
                     <div className="search-container-box">
