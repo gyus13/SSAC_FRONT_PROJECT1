@@ -124,81 +124,81 @@
                     zoom: 16
                 });
 
-                // //마커 위치 모음
-                // var markerLatLngs = new Array();
-                // //수작카츠 독산점
-                // markerLatLngs.push(new naver.maps.LatLng(37.468653572531856, 126.89535025189723));
-                // //이화룡 불짬뽕
-                // markerLatLngs.push(new naver.maps.LatLng(37.46955246261429, 126.89905664026355));
-                // //프랭크 서울
-                // markerLatLngs.push(new naver.maps.LatLng(37.4736118303616, 126.89517717590284));
-                // //북산동 순두부
-                // markerLatLngs.push(new naver.maps.LatLng(37.47045467981596, 126.89728648444668));
-                // //진명면옥
-                // markerLatLngs.push(new naver.maps.LatLng(37.47167694499592, 126.90042325184629));
-                // //순댕이네 얼큰수제비
-                // markerLatLngs.push(new naver.maps.LatLng(37.4724060587129, 126.89929374026363));
-                // //info 창 배열
-                // info = ["수작카츠","이화룡 불짬뽕","프랭크 서울","북산동 순두부","진영면옥","순댕이네 얼큰수제비"];
-                // var infoWindowArr = new Array();
+                // 마커 위치 모음
+                var markerLatLngs = new Array();
+                // 수작카츠 독산점
+                markerLatLngs.push(new naver.maps.LatLng(37.468653572531856, 126.89535025189723));
+                // 이화룡 불짬뽕
+                markerLatLngs.push(new naver.maps.LatLng(37.46955246261429, 126.89905664026355));
+                // 프랭크 서울
+                markerLatLngs.push(new naver.maps.LatLng(37.4736118303616, 126.89517717590284));
+                // 북산동 순두부
+                markerLatLngs.push(new naver.maps.LatLng(37.47045467981596, 126.89728648444668));
+                // 진명면옥
+                markerLatLngs.push(new naver.maps.LatLng(37.47167694499592, 126.90042325184629));
+                // 순댕이네 얼큰수제비
+                markerLatLngs.push(new naver.maps.LatLng(37.4724060587129, 126.89929374026363));
+                // info 창 배열
+                info = ["수작카츠","이화룡 불짬뽕","프랭크 서울","북산동 순두부","진영면옥","순댕이네 얼큰수제비"];
+                var infoWindowArr = new Array();
 
-                // //마커 옵션 배열
-                // var markerOptionArr = new Array();
-                // //실제 마커 배열
-                // var markers = new Array();
+                // 마커 옵션 배열
+                var markerOptionArr = new Array();
+                // 실제 마커 배열
+                var markers = new Array();
                 
-                // for(var i=0;i<markerLatLngs.length;++i){
-                //     infoWindowArr[i]= new naver.maps.InfoWindow({
-                //     content: '<div style="width:200px;text-align:center;padding:10px;"><b>'+info[i]+'</b></div>'
-                //     });
-                // }
+                for(var i=0;i<markerLatLngs.length;++i){
+                    infoWindowArr[i]= new naver.maps.InfoWindow({
+                    content: '<div style="width:200px;text-align:center;padding:10px;"><b>'+info[i]+'</b></div>'
+                    });
+                }
 
-                // //현 위치 처리
-                // var myMarker = new naver.maps.Marker({
-                //     position: myPosition.destinationPoint(0,20),
-                //     map:map,
-                //     icon: {
-                //         url: './img/my_marker.png',
-                //         size: new naver.maps.Size(50, 50),
-                //         origin: new naver.maps.Point(0, 0),
-                //         anchor: new naver.maps.Point(25, 25)
-                //     }
-                // });
-                // naver.maps.Event.addListener(myMarker, 'click', function(e){map.panTo(e.coord);});
+                // 현 위치 처리
+                var myMarker = new naver.maps.Marker({
+                    position: myPosition.destinationPoint(0,20),
+                    map:map,
+                    icon: {
+                        url: './img/my_marker.png',
+                        size: new naver.maps.Size(50, 50),
+                        origin: new naver.maps.Point(0, 0),
+                        anchor: new naver.maps.Point(25, 25)
+                    }
+                });
+                naver.maps.Event.addListener(myMarker, 'click', function(e){map.panTo(e.coord);});
 
                 
-                // //식당 마커 넣기
-                // for(var i=0;i<markerLatLngs.length;++i){
-                //     markerOptionArr[i]={
-                //         position: markerLatLngs[i].destinationPoint(0,20),
-                //         map:map,
-                //         icon: {
-                //             url: './img/map_marker.png',
-                //             size: new naver.maps.Size(50, 50),
-                //             origin: new naver.maps.Point(0, 0),
-                //             anchor: new naver.maps.Point(25, 25)
-                //         }
-                //     };
-                //     var marker = new naver.maps.Marker(markerOptionArr[i]);
-                //     marker.seq = i;
-                //     console.log(marker);
-                //     markers.push(marker);
-                // }
+                // 식당 마커 넣기
+                for(var i=0;i<markerLatLngs.length;++i){
+                    markerOptionArr[i]={
+                        position: markerLatLngs[i].destinationPoint(0,20),
+                        map:map,
+                        icon: {
+                            url: './img/map_marker.png',
+                            size: new naver.maps.Size(50, 50),
+                            origin: new naver.maps.Point(0, 0),
+                            anchor: new naver.maps.Point(25, 25)
+                        }
+                    };
+                    var marker = new naver.maps.Marker(markerOptionArr[i]);
+                    marker.seq = i;
+                    console.log(marker);
+                    markers.push(marker);
+                }
                 
-                // //클릭 이벤트 넣기
-                // for(var i=0;i<6;i++){
-                //         naver.maps.Event.addListener(markers[i], 'click', function(e) {
-                //             console.log(e);
-                //             console.log(e.overlay.seq);
-                //             const seq = e.overlay.seq;
-                //             map.panTo(e.coord);
-                //                 if (infoWindowArr[seq].getMap()) {
-                //                     infoWindowArr[seq].close();
-                //                 } else {
-                //                     infoWindowArr[seq].open(map, markers[seq]);
-                //                 }
-                //             });
-                // }
+                // 클릭 이벤트 넣기
+                for(var i=0;i<6;i++){
+                        naver.maps.Event.addListener(markers[i], 'click', function(e) {
+                            console.log(e);
+                            console.log(e.overlay.seq);
+                            const seq = e.overlay.seq;
+                            map.panTo(e.coord);
+                                if (infoWindowArr[seq].getMap()) {
+                                    infoWindowArr[seq].close();
+                                } else {
+                                    infoWindowArr[seq].open(map, markers[seq]);
+                                }
+                            });
+                }
             </script>
         </div>
     </div>
