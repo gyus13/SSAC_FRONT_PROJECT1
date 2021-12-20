@@ -1,5 +1,6 @@
 const ItemImg = ({ img }) => {
     const { id, url } = img;
+    console.log(img);
     return (
         <div className="item">
             <img alt={id} src={url} />
@@ -10,13 +11,17 @@ const ItemImg = ({ img }) => {
 const Item = ({ stores }) => {
     const { id, content, title, score, img } = stores;
     return (
-        <div>
+        <div className="feed">
             <div className="feed-container">
-                <div className='explain'>
-                    <p>{title}</p> <p>{content}</p> <p>{score}</p>
+                <div className='feed__explain'>
+                    <p className="feed__explain-name" >{title}</p>
+                    <p className="feed__explain-rating" >★ {score}</p>
+                    <p className="feed__explain-content">
+                        {content}
+                    </p>
                 </div>
 
-                <div className="item-container">
+                <div className="feed__item-container">
                     {
                         img.map((a, i) => {
                             return <ItemImg img={a} key={i}></ItemImg>
@@ -24,6 +29,8 @@ const Item = ({ stores }) => {
                 </div>
             </div>
         </div>
+
+
     )
 }
 
