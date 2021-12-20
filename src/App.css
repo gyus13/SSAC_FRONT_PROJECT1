@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  /*바디 컬러*/
+  background: #fafafa;
+}
+
+.navagation_div {
+  height: 80px;
+}
+
+/*
+  #####################################################################################################
+  헤더
+  #####################################################################################################
+  */
+
+.header {
+  box-sizing: content-box;
+  margin-bottom: 20px;
+}
+
+.header__profile {
+  /*730px*/
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.header__profileimgwrapper {
+  position: relative;
+  overflow: auto;
+  width: 300px;
+}
+
+.header__profileimgwrapper-profileimg {
+  position: absolute;
+  overflow: hidden;
+  border: 4px solid #c94c9b;
+  top: 10px;
+  right: 30px;
+  border-radius: 50%;
+}
+
+.header__profile-description {
+  position: relative;
+  width: 430px;
+
+  /*에러 방지용*/
+  overflow: auto;
+}
+
+.header__profile-description h1 {
+  position: absolute;
+  font-weight: lighter;
+  font-size: 3rem;
+  top: 10%;
+  left: 10%;
+}
+
+.header__profile-description span {
+  position: absolute;
+  font-size: 1.2rem;
+  top: 40%;
+  left: 10%;
+}
+
+.header__profile-description p {
+  position: absolute;
+  text-align: left;
+  left: 10%;
+  bottom: 15%;
+}
+/**
+  .header__link {
+    margin: 0;
+    display: flex;
+    position: relative;
+    height: 150px;
+    align-items: center;
+  
+    border: pink solid 1px;
+  }
+  
+  .header__link-container {
+    position: relative;
+    left: 200px;
+    width: 200px;
+    height: 150px;
+    background-color: gainsboro;
+    width: 730px;
+  }
+  **/
+
+/*
+  #####################################################################################################
+  카테고리
+  #####################################################################################################
+  */
+
+.category {
+  box-sizing: content-box;
+}
+
+.category hr {
+  /*
+    margin 과 text align을 같이 쓰면, 가운데 정렬이 되지 않는다.
+    뒤에 auto 값을 줘야함
+    */
+  text-align: center;
+  margin: 0px auto;
+  height: 1px;
+  background-color: #c94c9b;
+  width: 730px;
+}
+
+.category__wrapper {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: -2px;
+  height: 30px;
+}
+
+.category__info {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.category__map {
+  width: 70px;
+  margin-left: 20px;
+}
+
+.category a {
+  color: black;
+  text-decoration-line: none;
+}
+
+.category a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.category a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.category a:hover {
+  color: pink;
+}
+
+.category a:active {
+  color: red;
+}
+
+/*
+  #####################################################################################################
+  메인
+  #####################################################################################################
+  */
+
+/*
+  #####################################################################################################
+  피드
+  #####################################################################################################
+  */
+
+.main {
+  width: 800px;
+  position: relative;
+  left: 0px;
+  right: 0px;
+
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.feed {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  width: 100%;
+  height: 220px;
+}
+
+.feed__item-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.item {
+  height: 240px;
+  width: 240px;
+  background-color: grey;
+  justify-content: space-evenly;
+}
+
+.feed__item-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.feed__explain {
+  box-sizing: content-box;
+  position: absolute;
+  width: 640px;
+  top: 40px;
+  left: 40px;
+  font-size: 14px;
+  color: white;
+
+  z-index: 5;
+  opacity: 0;
+}
+
+.feed__explain p {
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.feed__explain-name {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.feed:hover .feed__item-container {
+  transition: transform 1s;
+  filter: brightness(70%);
+}
+.feed:hover .feed__explain {
+  opacity: 1;
+}
+
+/*
+  #####################################################################################################
+  맵
+  #####################################################################################################
+  */
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  border: solid gainsboro 2px;
+}
+
+#map {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*
+  #####################################################################################################
+  풋터
+  #####################################################################################################
+  */
+
+.footer {
+  margin: 0;
+  position: relative;
+  height: 70px;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+}
