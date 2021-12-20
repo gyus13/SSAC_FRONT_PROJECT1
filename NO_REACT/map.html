@@ -153,6 +153,7 @@
                     });
                 }
 
+                //현 위치 처리
                 var myMarker = new naver.maps.Marker({
                     position: myPosition.destinationPoint(0,20),
                     map:map,
@@ -163,10 +164,10 @@
                         anchor: new naver.maps.Point(25, 25)
                     }
                 });
-
                 naver.maps.Event.addListener(myMarker, 'click', function(e){map.panTo(e.coord);});
 
                 
+                //식당 마커 넣기
                 for(var i=0;i<markerLatLngs.length;++i){
                     markerOptionArr[i]={
                         position: markerLatLngs[i].destinationPoint(0,20),
@@ -179,76 +180,25 @@
                         }
                     };
                     var marker = new naver.maps.Marker(markerOptionArr[i]);
+                    marker.seq = i;
+                    console.log(marker);
                     markers.push(marker);
                 }
-
-                //반복문이 왜 안되는지
-
-                naver.maps.Event.addListener(markers[0], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[0].getMap()) {
-                            infoWindowArr[0].close();
-                        } else {
-                            infoWindowArr[0].open(map, markers[0]);
-                        }
-                    }
-                );
-
-
-                naver.maps.Event.addListener(markers[1], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[1].getMap()) {
-                            infoWindowArr[1].close();
-                        } else {
-                            infoWindowArr[1].open(map, markers[1]);
-                        }
-                    }
-                );
-
-
-                naver.maps.Event.addListener(markers[2], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[2].getMap()) {
-                            infoWindowArr[2].close();
-                        } else {
-                            infoWindowArr[2].open(map, markers[2]);
-                        }
-                    }
-                );
-
-
-                naver.maps.Event.addListener(markers[3], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[3].getMap()) {
-                            infoWindowArr[3].close();
-                        } else {
-                            infoWindowArr[3].open(map, markers[3]);
-                        }
-                    }
-                );
-
-
-                naver.maps.Event.addListener(markers[4], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[4].getMap()) {
-                            infoWindowArr[4].close();
-                        } else {
-                            infoWindowArr[4].open(map, markers[4]);
-                        }
-                    }
-                );
-
-
-                naver.maps.Event.addListener(markers[5], 'click', function(e){
-                        map.panTo(e.coord);
-                        if (infoWindowArr[5].getMap()) {
-                            infoWindowArr[5].close();
-                        } else {
-                            infoWindowArr[5].open(map, markers[5]);
-                        }
-                    }
-                );
-
+                
+                //클릭 이벤트 넣기
+                for(var i=0;i<6;i++){
+                        naver.maps.Event.addListener(markers[i], 'click', function(e) {
+                            console.log(e);
+                            console.log(e.overlay.seq);
+                            const seq = e.overlay.seq;
+                            map.panTo(e.coord);
+                                if (infoWindowArr[seq].getMap()) {
+                                    infoWindowArr[seq].close();
+                                } else {
+                                    infoWindowArr[seq].open(map, markers[seq]);
+                                }
+                            });
+                }
             </script>
         </div>
     </div>
