@@ -1,6 +1,7 @@
-import { useState } from "react";
-import "./App.css";
-import Modal from "react-modal";
+import { useState } from 'react';
+import './App.css';
+import './Header.css';
+// import Modal from "react-modal";
 
 const Header = () => {
   // const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,7 +33,7 @@ const Header = () => {
 
         <div className="header__profile-description">
           <h1>군싹이</h1>
-          <button onClick={onClick}>{isClicked ? "팔로잉" : "팔로우"}</button>
+          <button onClick={onClick}>{isClicked ? '팔로잉' : '팔로우'}</button>
           {/* <button onClick={() => setModalIsOpen(true)}>더보기</button>
           <Modal isOpen={true}>
             <div>메세지 보내기</div>
