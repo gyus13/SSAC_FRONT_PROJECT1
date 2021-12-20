@@ -10,9 +10,14 @@ const ItemImg = ({ img }) => {
 
 const Item = ({ stores }) => {
     const { id, content, title, score, img } = stores;
+
+    const handleOnClick = {
+
+    }
+
     return (
         <div className="feed">
-            <div className="feed-container">
+            <div className="feed-container" onClick={handleOnClick}>
                 <div className='feed__explain'>
                     <p className="feed__explain-name" >{title}</p>
                     <p className="feed__explain-rating" >★ {score}</p>

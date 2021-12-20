@@ -1,6 +1,7 @@
 import "./Navigation.css";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () =>{
     return (
@@ -24,7 +25,7 @@ const Navigation = () =>{
           
             <div className="navigation-icons">
                 <a href="#!" target ="_blank" className="navigation-link">
-                    <i className="fas fa-home"></i>
+                <FontAwesomeIcon icon={faHome} className="home" />
                 </a>
                 <a href="#!" className="navigation-link notifica">
                     <i className="far fa-sticky-note"></i>
