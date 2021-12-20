@@ -1,6 +1,5 @@
 import "./App.css";
 
-const onClick 
 const Header = () => {
   return (
     <div className="header">
@@ -18,7 +17,7 @@ const Header = () => {
 
         <div className="header__profile-description">
           <h1>군싹이</h1>
-          <button onClick={onClick}>follow</button>
+          <button>follow</button>
           <span>
             <b>게시물: 10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;팔로워: 2.7M</b>
           </span>
