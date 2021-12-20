@@ -27,15 +27,15 @@ const stores = [
         img : [
             {
                 id : 0,
-                url : "./pork0"
+                url : "./china0"
             },
             {
                 id : 1,
-                url : "./pork1"
+                url : "./china1"
             },
             {
                 id : 2,
-                url : "./pork2"
+                url : "./china2"
             }
         ]
     },
@@ -47,15 +47,15 @@ const stores = [
         img : [
             {
                 id : 0,
-                url : "./pork0"
+                url : "./frank0"
             },
             {
                 id : 1,
-                url : "./pork1"
+                url : "./frank1"
             },
             {
                 id : 2,
-                url : "./pork2"
+                url : "./frank2"
             }
         ]
     },
@@ -67,15 +67,15 @@ const stores = [
         img : [
             {
                 id : 0,
-                url : "./pork0"
+                url : "./tofu0"
             },
             {
                 id : 1,
-                url : "./pork1"
+                url : "./tofu1"
             },
             {
                 id : 2,
-                url : "./pork2"
+                url : "./tofu2"
             }
         ]
     }

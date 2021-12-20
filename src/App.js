@@ -1,5 +1,5 @@
 import Feed from "./Feed";
-import Login from "./Login";
+import Modal from "./Modal";
 import './App.css';
 
 function App() {

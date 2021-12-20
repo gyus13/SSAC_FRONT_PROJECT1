@@ -1,27 +1,22 @@
-import User from "./User" ;
- 
- const Modal = () => {
-    return (
-        <div className="modal">
-            <div className="modal__img">
+import React from 'react'
+import './Modal.css'
 
-            </div>
+function Modal({ className, visible, children }) {
+  return (
+    <>
+    <div className = "ModalOverlay"></div>
+    <div className = "ModalWrapper"></div>
+    <div className = "ModalInner"></div>
+    <div className = "ModalWrapper"></div>
+      {/* <ModalOverlay visible={visible} />
+      <ModalWrapper className={className} tabIndex="-1" visible={visible}>
+        <ModalInner tabIndex="0" className="modal-inner">
+          {children}
+        </ModalInner>
+      </ModalWrapper> */}
+    </>
+  )
+}
 
-            <div className="modal__content">
-                <div className="modal_content-profile">
 
-                </div>
-
-                <div className="modal__content-gul">
-
-                </div>
-
-                <div className="modal__content-heart">
-
-                </div>
-            </div>
-        </div>
-    )
- }
-
- export default Modal;
+export default Modal;

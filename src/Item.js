@@ -1,22 +1,26 @@
-import stores from "./stores";
+const ItemImg = ({ img }) => {
+    const { id, url } = img;
+    return (
+        <div className="item">
+            <img alt={id} src={url} />
+        </div>
+    );
+}
 
-const Item = (props) => {
+const Item = ({ stores }) => {
+    const { id, content, title, score, img } = stores;
     return (
         <div>
             <div className="feed-container">
                 <div className='explain'>
-                    <p>{props.stores.title}</p> <p>{props.stores.content}</p> <p>{props.stores.score}</p>
+                    <p>{title}</p> <p>{content}</p> <p>{score}</p>
                 </div>
+
                 <div className="item-container">
-                    <div className="item">
-                        <img alt="food1" src={props.stores.img.url} />
-                    </div>
-                    <div className="item">
-                        <img alt="food2" src={props.stores.img.url} />
-                    </div>
-                    <div className="item">
-                        <img alt="food3" src={props.stores.img.url} />
-                    </div>
+                    {
+                        img.map((a, i) => {
+                            return <ItemImg img={a} key={i}></ItemImg>
+                        })}
                 </div>
             </div>
         </div>
