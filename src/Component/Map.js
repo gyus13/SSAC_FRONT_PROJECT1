@@ -2,9 +2,16 @@ import "../App.css"
 import {NaverMap,Marker}  from "react-naver-maps"
 import my_Marker from "../img/my_marker.png";
 import map_Marker from "../img/map_marker.png";
+import { useState } from "react";
 
 const Map = () => {
     const navermaps = window.naver.maps;
+
+    //map 함수 묶기 
+    const LatLngs = [(37.47238731740359, 126.89602897456294), (37.468653572531856, 126.89535025189723), (37.46955246261429, 126.89905664026355)
+        (37.4736118303616, 126.89517717590284),(37.47045467981596, 126.89728648444668), (37.47167694499592, 126.90042325184629),
+        (37.4724060587129, 126.89929374026363)
+    ]
 
 
     return (
