@@ -1,7 +1,8 @@
 import "./Navigation.css";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faPen, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () =>{
     return (
@@ -25,10 +26,10 @@ const Navigation = () =>{
           
             <div className="navigation-icons">
                 <a href="#!" target ="_blank" className="navigation-link">
-                <FontAwesomeIcon icon={faHome} className="home" />
+                <FontAwesomeIcon icon={faHome} className="fas fa-home" />
                 </a>
                 <a href="#!" className="navigation-link notifica">
-                    <i className="far fa-sticky-note"></i>
+                <FontAwesomeIcon icon={faPen} className="fas fa-pen" />
                     <div className="notification-bubble-wrapper">
                         <div className="notification-bubble">
                         <span className="notifications-count">99</span>
@@ -36,7 +37,7 @@ const Navigation = () =>{
                     </div>
                 </a>
                 <a href="#!" className="navigation-link">
-                    <i className="far fa-envelope"></i>
+                <FontAwesomeIcon icon={faEnvelope} className="fas fa-envelope"></FontAwesomeIcon>
                 </a>
                 <a href="#!" id="signout" className="navigation-link">
                 </a>

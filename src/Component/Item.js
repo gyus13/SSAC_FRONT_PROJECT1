@@ -1,3 +1,6 @@
+import ReactModal from "react-modal";
+import { useState } from "react";
+
 const ItemImg = ({ img }) => {
     const { id, url } = img;
     console.log(img);
@@ -11,9 +14,9 @@ const ItemImg = ({ img }) => {
 const Item = ({ stores }) => {
     const { id, content, title, score, img } = stores;
 
-    const handleOnClick = {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    }
+    const handleOnClick = ()=> setModalIsOpen(true)
 
     return (
         <div className="feed">
@@ -25,6 +28,8 @@ const Item = ({ stores }) => {
                         {content}
                     </p>
                 </div>
+
+                <ReactModal > </ReactModal>
 
                 <div className="feed__item-container">
                     {
