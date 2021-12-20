@@ -14,10 +14,12 @@ function App() {
 
   const handleOnClick = ()=> {
       setModalIsOpen(true);
+      document.body.style.overflow = "hidden";
   }
 
   const handleOnClose = () => {
     setModalIsOpen(false);
+    document.body.style.overflow = "unset"
   }
 
   return (
@@ -33,7 +35,7 @@ function App() {
       <Category></Category>
       
       <Route path ="/feed">
-      <Feed handleOnClick={handleOnClick}></Feed>
+      <Feed handleOnClick={handleOnClick} ></Feed>
       </Route>
 
       <Route path ="/map">
