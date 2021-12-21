@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SSAC_FRONT_PROJECT1/static/css/main.a296974e.css",
+    "main.js": "/SSAC_FRONT_PROJECT1/static/js/main.5a2d3904.js",
+    "index.html": "/SSAC_FRONT_PROJECT1/index.html",
+    "main.a296974e.css.map": "/SSAC_FRONT_PROJECT1/static/css/main.a296974e.css.map",
+    "main.5a2d3904.js.map": "/SSAC_FRONT_PROJECT1/static/js/main.5a2d3904.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a296974e.css",
+    "static/js/main.5a2d3904.js"
+  ]
+}
