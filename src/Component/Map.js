@@ -1,7 +1,7 @@
 import "../App.css"
 import {NaverMap,Marker}  from "react-naver-maps"
-import my_Marker from "../my_marker.png";
 import map_Marker from "../map_marker.png";
+import my_Marker from "../my_marker.png";
 
 const Map = () => {
 
