@@ -44,9 +44,6 @@ body {
 .header__profile-description {
   position: relative;
   width: 430px;
-
-  /*에러 방지용*/
-  overflow: auto;
 }
 
 .header__profile-description h1 {
@@ -122,12 +119,18 @@ body {
 }
 
 .category__info {
+  display: block;
+  padding-top: 5px;
   width: 70px;
+  height: 50px;
   margin-right: 20px;
 }
 
 .category__map {
+  display: block;
+  padding-top: 5px;
   width: 70px;
+  height: 50px;
   margin-left: 20px;
 }
 
@@ -217,7 +220,7 @@ body {
   position: absolute;
   width: 640px;
   top: 40px;
-  left: 40px;
+  left: 80px;
   font-size: 14px;
   color: white;
 

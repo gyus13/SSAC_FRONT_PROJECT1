@@ -1,4 +1,5 @@
 import "../App.css"
+import {Link} from 'react-router-dom';
 
 const Category = () => {
     return(
@@ -6,17 +7,11 @@ const Category = () => {
             <hr/>
             <div className="category__wrapper">
                 <div className="category__info">
-                    <a href="index.html">
-                        <img src="img/feed_icon.png" alt="피드 아이콘"></img>
-                        <span>정보</span>
-                    </a>
+                <Link to="/feed"><span>정보</span></Link>    
                 </div>
         
                 <div className="category__map">
-                    <a href="map.html">
-                        <img src="img/map_icon.png" alt="지도 아이콘"></img>
-                        <span>지도</span>
-                    </a>
+                <Link to="/map"><span>지도</span></Link>
                 </div>  
             </div>
         </div>

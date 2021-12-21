@@ -1,7 +1,7 @@
 import "../App.css"
 import {NaverMap,Marker}  from "react-naver-maps"
-import my_Marker from "../img/my_marker.png";
-import map_Marker from "../img/map_marker.png";
+import my_Marker from "../my_marker.png";
+import map_Marker from "../map_marker.png";
 
 const Map = () => {
 
@@ -17,14 +17,8 @@ const Map = () => {
         [37.4724060587129, 126.89929374026363]
     ]
 
-    //확인함수 안지웠음 지워주
-    function chk(){
-        console.log(LatLngs[0][0]);
-    }
-
     return (
         <div className="main">
-            {chk()}
             <NaverMap
                 className="map-container"
                 mapDivId={'map'} // default: react-naver-map
@@ -59,10 +53,6 @@ const Map = () => {
                             anchor: new navermaps.Point(25, 25)
                         }}
                         
-                        // 클릭하면 이동, info 창 생성
-                        // 왜안됨
-                        onClick={() => {
-                        }}
                     />))
                 }
 
