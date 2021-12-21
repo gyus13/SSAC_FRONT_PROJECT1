@@ -62,7 +62,6 @@ const Map = () => {
                         // 클릭하면 이동, info 창 생성
                         // 왜안됨
                         onClick={() => {
-                            navermaps.panTo(LatLngs[i][0],LatLngs[i][1]);
                         }}
                     />))
                 }
