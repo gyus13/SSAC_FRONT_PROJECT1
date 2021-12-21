@@ -5,11 +5,13 @@ const Detail = ({handleOnClose}) => {
     <div className="modal">
         <div className="modal-background" onClick={handleOnClose}>
           <div className="modal__card">
-            <div className="modal-background__card-img">
+            <div className="modal__card-img">
               <img alt="0" src="img/china0.jpg"></img>
             </div>
-            <div className="modal-background__card-content">
-              <div className=""></div>
+            <div className="modal__card-content">
+              <div className="modal__card-header"> <p>프로필</p> </div>
+              <div className="modal__card-main"> <p>메인</p> </div>
+              <div className="modal__card-footter"> <p>댓글</p> </div>
             </div>
           </div>
     </div>
