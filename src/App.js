@@ -41,6 +41,7 @@ function App() {
       <Route path ="/map">
       </Route>
 
+
       <Footer></Footer>
     </div>
   );
